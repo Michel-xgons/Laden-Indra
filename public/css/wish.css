@@ -1,0 +1,836 @@
+/* ==================================================
+   RSVP & WISHES
+================================================== */
+
+.wish-section {
+    padding: 100px 0;
+    background: var(--background);
+}
+
+.wish-section .section-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3rem;
+    color: var(--text);
+}
+
+.wish-section .text-muted {
+    color: var(--text-light);
+    max-width: 550px;
+    margin: auto;
+}
+
+/* ==================================================
+   FORM
+================================================== */
+
+.wish-form-card {
+    max-width: 700px;
+
+    margin: auto;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    backdrop-filter: blur(18px) saturate(140%);
+
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    border-radius: var(--radius);
+
+    padding: 35px;
+
+    box-shadow: var(--shadow);
+}
+
+.form-label {
+    font-weight: 600;
+
+    color: var(--text);
+
+    margin-bottom: 8px;
+}
+
+.form-control {
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+    padding: 14px 16px;
+
+    box-shadow: none;
+
+    transition: 0.35s;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 0.18rem rgba(0, 0, 0, 0.08);
+}
+
+/* ==================================================
+   RADIO RSVP
+================================================== */
+
+.attendance-group {
+    display: flex;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.attendance-group .form-check {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.form-check-input {
+    width: 20px;
+
+    height: 20px;
+
+    cursor: pointer;
+
+    border: 2px solid var(--primary);
+}
+
+.form-check-input:checked {
+    background: var(--primary);
+
+    border-color: var(--primary);
+}
+
+.form-check-label {
+    cursor: pointer;
+
+    font-weight: 500;
+
+    color: var(--text);
+}
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.btn-gold {
+    width: 100%;
+
+    background: var(--primary);
+
+    color: var(--secondary);
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 14px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease,
+        background 0.35s ease;
+}
+
+.btn-gold:hover {
+    background: var(--primary);
+
+    filter: brightness(1.15);
+
+    color: #fff;
+
+    transform: translateY(-2px);
+}
+
+/* ==================================================
+   LIST
+================================================== */
+
+.wish-list {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.wish-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    backdrop-filter: blur(18px) saturate(140%);
+
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    border-radius: var(--radius);
+
+    padding: 24px;
+
+    margin-bottom: 18px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+.wish-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.wish-card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255, 255, 255, 0.68);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.wish-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 12px;
+}
+
+.wish-name {
+    margin: 0;
+
+    font-weight: 600;
+
+    color: var(--text);
+}
+
+/* ==================================================
+   RSVP BADGE
+================================================== */
+
+.attendance-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 5px 12px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.attendance-badge i {
+    font-size: 13px;
+}
+
+.attendance-badge.hadir {
+    background: #eef9f2;
+
+    color: #2f9e44;
+}
+
+.attendance-badge.tidak-hadir {
+    background: #fff1f1;
+
+    color: #d6336c;
+}
+
+.wish-message {
+    margin: 15px 0 0;
+
+    color: #555;
+
+    line-height: 1.8;
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+    .wish-section {
+        padding: 80px 0;
+    }
+
+    .wish-section .section-title {
+        font-size: 2.4rem;
+    }
+
+    .wish-form-card {
+        padding: 24px;
+    }
+
+    .attendance-group {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .wish-card {
+        padding: 18px;
+    }
+}
+
+/* ==================================================
+   RSVP SUMMARY
+================================================== */
+
+.rsvp-summary {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin: 60px 0;
+}
+
+.summary-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    backdrop-filter: blur(18px) saturate(140%);
+
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    border-radius: 999px;
+
+    min-height: 150px;
+
+    padding: 24px 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+.summary-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.summary-card:hover {
+    transform: translateY(-8px);
+
+    background: rgba(255, 255, 255, 0.68);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.summary-card i {
+    width: 58px;
+
+    height: 58px;
+
+    margin: 0 auto 16px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #f5f5f5;
+
+    color: var(--primary);
+
+    font-size: 24px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card:hover i {
+    transform: scale(1.08);
+}
+
+.summary-card h3 {
+    font-size: 34px;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+
+    line-height: 1;
+}
+
+.summary-card p {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: var(--text-light);
+}
+
+/* ==================================================
+   LOAD MORE
+================================================== */
+
+.load-more-wrapper {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 45px;
+}
+
+.load-more-btn {
+    background: transparent;
+
+    border: none;
+
+    color: var(--primary);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+.load-more-btn:hover {
+    transform: translateY(-4px);
+
+    color: #444;
+}
+
+.load-more-text {
+    font-weight: 600;
+
+    font-size: 1rem;
+
+    letter-spacing: 0.5px;
+}
+
+.load-more-text i {
+    margin-right: 8px;
+}
+
+.load-more-arrow {
+    font-size: 1.4rem;
+
+    opacity: 0.75;
+
+    animation: bounceArrow 1.8s infinite;
+}
+
+@keyframes bounceArrow {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+.load-more-btn.loading {
+    pointer-events: none;
+}
+
+.load-more-btn.finished {
+    color: var(--text-light);
+
+    cursor: default;
+}
+
+.load-more-btn.finished:hover {
+    transform: none;
+}
+
+/* ==================================================
+   TOAST NOTIFICATION
+================================================== */
+
+.wish-toast {
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 340px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    backdrop-filter: blur(18px) saturate(140%);
+
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    box-shadow: var(--shadow-hover);
+
+    z-index: 99999;
+
+    opacity: 0;
+
+    transform: translateX(80px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.wish-toast.show {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+.toast-icon {
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.toast-icon i {
+    font-size: 26px;
+}
+
+.wish-toast.success .toast-icon {
+    background: #eef9f2;
+
+    color: #2f9e44;
+}
+
+.wish-toast.error .toast-icon {
+    background: #fff1f1;
+
+    color: #d6336c;
+}
+
+.wish-toast.info .toast-icon {
+    background: #eef5ff;
+
+    color: #2563eb;
+}
+
+.toast-content {
+    flex: 1;
+}
+
+.toast-content h6 {
+    margin: 0 0 5px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: var(--text);
+}
+
+.toast-content p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+.toast-progress {
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    height: 4px;
+
+    width: 100%;
+
+    background: var(--primary);
+
+    transform-origin: left;
+
+    animation: toastProgress 3.5s linear forwards;
+}
+
+@keyframes toastProgress {
+    from {
+        transform: scaleX(1);
+    }
+
+    to {
+        transform: scaleX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .wish-toast {
+        left: 15px;
+
+        right: 15px;
+
+        width: auto;
+
+        bottom: 20px;
+    }
+}
+
+/* ==========================================
+   WISH USER
+========================================== */
+
+.wish-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.wish-avatar {
+    width: 56px;
+
+    height: 56px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #fff;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    flex-shrink: 0;
+
+    border: 3px solid rgba(255, 255, 255, 0.85);
+
+    box-shadow:
+        0 0 0 2px rgba(0, 0, 0, 0.06),
+        0 10px 22px rgba(0, 0, 0, 0.1);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.wish-card:hover .wish-avatar {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 0, 0.08),
+        0 14px 28px rgba(0, 0, 0, 0.14);
+}
+
+.wish-user-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.wish-name {
+    margin: 0;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: var(--text);
+}
+
+.wish-time {
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+.wish-message {
+    margin-top: 18px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-light);
+
+    line-height: 1.8;
+}
+
+/* ==========================================
+   AVATAR COLORS
+========================================== */
+
+.avatar-gold {
+    background: linear-gradient(135deg, #d8b45c, #b8860b);
+}
+
+.avatar-blue {
+    background: linear-gradient(135deg, #4f8ef7, #2f6fe4);
+}
+
+.avatar-green {
+    background: linear-gradient(135deg, #50c878, #2e9d57);
+}
+
+.avatar-purple {
+    background: linear-gradient(135deg, #9b5de5, #7a39d4);
+}
+
+.avatar-pink {
+    background: linear-gradient(135deg, #e84a8a, #c92f70);
+}
+
+.avatar-orange {
+    background: linear-gradient(135deg, #ff8c42, #f26b1d);
+}
+
+.avatar-cyan {
+    background: linear-gradient(135deg, #00b8d9, #008fb3);
+}
+
+.avatar-gray {
+    background: linear-gradient(135deg, #6c757d, #495057);
+}
+
+@media (max-width: 992px) {
+    .rsvp-summary {
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .rsvp-summary {
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 10px;
+    }
+
+    .summary-card {
+        min-height: 125px;
+
+        padding: 14px 8px;
+
+        border-radius: 18px;
+    }
+
+    .summary-card i {
+        width: 42px;
+
+        height: 42px;
+
+        margin-bottom: 10px;
+
+        font-size: 18px;
+    }
+
+    .summary-card h3 {
+        font-size: 24px;
+
+        margin-bottom: 4px;
+    }
+
+    .summary-card p {
+        font-size: 11px;
+
+        line-height: 1.2;
+    }
+}

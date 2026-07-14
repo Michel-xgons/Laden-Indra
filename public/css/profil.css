@@ -1,0 +1,221 @@
+/* ==================================================
+   BRIDE & GROOM
+================================================== */
+
+.couple-section {
+    background: var(--secondary);
+}
+
+/* ==================================================
+   SECTION
+================================================== */
+
+.couple {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 80px 0;
+}
+
+.couple .container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+.couple-image {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.couple-image img {
+    width: 100%;
+
+    max-width: 520px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    border: 6px solid #fff;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.couple:hover .couple-image img {
+    transform: scale(1.015);
+
+    box-shadow: var(--shadow-hover);
+}
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.couple-info {
+    max-width: 480px;
+}
+
+.couple-label {
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 24px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: var(--text);
+}
+
+.couple-label::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 2px;
+
+    margin-top: 10px;
+
+    background: var(--text);
+}
+
+.couple-info h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 4rem;
+
+    font-weight: 700;
+
+    line-height: 1.05;
+
+    letter-spacing: 0.5px;
+
+    color: var(--text);
+
+    margin-bottom: 30px;
+}
+
+.couple-info p {
+    font-size: 1.05rem;
+
+    line-height: 2;
+
+    color: var(--text-light);
+}
+
+/* ==================================================
+   GROOM
+================================================== */
+
+.groom {
+    background: #ffffff;
+}
+
+/* ==================================================
+   BRIDE
+================================================== */
+
+.bride {
+    background: var(--background);
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 992px) {
+    .couple {
+        min-height: auto;
+
+        padding: 100px 0;
+    }
+
+    .couple .container {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 50px;
+    }
+
+    .bride .container {
+        flex-direction: column-reverse;
+    }
+
+    .couple-info {
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+    .couple-info h2 {
+        font-size: 3rem;
+    }
+
+    .couple-image img {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .couple {
+        padding: 80px 0;
+    }
+
+    .couple .container {
+        gap: 35px;
+    }
+
+    .couple-info h2 {
+        font-size: 2.4rem;
+    }
+
+    .couple-label {
+        font-size: 0.75rem;
+
+        letter-spacing: 3px;
+    }
+
+    .couple-info p {
+        font-size: 0.95rem;
+
+        line-height: 1.8;
+    }
+
+    .couple-image img {
+        max-width: 280px;
+
+        border-radius: 20px;
+    }
+}

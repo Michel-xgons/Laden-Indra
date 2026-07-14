@@ -1,0 +1,222 @@
+/* =========================
+   COVER
+========================= */
+
+.cover-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 1.2s ease;
+}
+
+.cover-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.28),
+        rgba(0, 0, 0, 0.68)
+    );
+
+    transition: background 0.8s ease;
+}
+
+.cover-content {
+    position: relative;
+    z-index: 2;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 20px;
+}
+
+.cover h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.cover {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100dvh;
+
+    z-index: 9999;
+
+    transition:
+        transform 0.9s ease,
+        opacity 0.9s ease;
+}
+
+.cover-subtitle {
+    font-size: 0.82rem;
+
+    font-weight: 600;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    margin-bottom: 16px;
+}
+
+.cover-to {
+    margin-top: 30px;
+
+    margin-bottom: 6px;
+
+    font-size: 0.95rem;
+
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.cover-guest {
+    font-size: 1.45rem;
+
+    font-weight: 600;
+
+    color: #fff;
+
+    margin-bottom: 34px;
+}
+
+.cover.hide {
+    transform: translateY(-100%);
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.cover-image.zoom {
+    transform: scale(1.08);
+}
+
+.cover-overlay.dark {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.82)
+    );
+}
+
+#openInvitation {
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+#openInvitation.clicked {
+    transform: scale(0.93);
+
+    opacity: 0.8;
+}
+
+/* =========================
+   COVER ELEMENT ANIMATION
+========================= */
+
+.cover-subtitle,
+.cover-title,
+.cover-to,
+.cover-guest,
+.cover-button {
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+.cover-content.hide .cover-subtitle,
+.cover-content.hide .cover-title,
+.cover-content.hide .cover-to,
+.cover-content.hide .cover-guest,
+.cover-content.hide .cover-button {
+    opacity: 0;
+
+    transform: translateY(-20px);
+}
+
+/* ==================================================
+   BUTTON SYSTEM
+================================================== */
+
+#openInvitation,
+.btn-gold {
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 14px 34px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: var(--primary);
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+#openInvitation:hover,
+.btn-gold:hover {
+    background: var(--primary);
+
+    color: var(--secondary);
+
+    border-color: var(--primary);
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+#openInvitation:active,
+.btn-gold:active {
+    transform: scale(0.97);
+}
