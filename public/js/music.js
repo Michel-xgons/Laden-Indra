@@ -33,54 +33,52 @@ document.addEventListener("DOMContentLoaded", () => {
             openBtn.disabled = true;
 
             // 1. Button mengecil
-
             openBtn.classList.add("clicked");
 
             // 2. Semua text menghilang
-
             setTimeout(() => {
-                coverContent.classList.add("hide");
+                coverContent?.classList.add("hide");
             }, 120);
 
             // 3. Background zoom
-
             setTimeout(() => {
-                coverImage.classList.add("zoom");
+                coverImage?.classList.add("zoom");
             }, 250);
 
             // 4. Overlay lebih gelap
-
             setTimeout(() => {
-                coverOverlay.classList.add("dark");
+                coverOverlay?.classList.add("dark");
             }, 350);
 
             // 5. Musik mulai
-
             setTimeout(() => {
-                music
-                    .play()
-                    .then(() => {
-                        musicBtn.classList.add("playing");
+                if (music) {
+                    music
+                        .play()
+                        .then(() => {
+                            musicBtn?.classList.add("playing");
 
-                        musicBtn.innerHTML = '<i class="bi bi-disc-fill"></i>';
-                    })
-                    .catch(() => {});
+                            if (musicBtn) {
+                                musicBtn.innerHTML =
+                                    '<i class="bi bi-disc-fill"></i>';
+                            }
+                        })
+                        .catch(() => {});
+                }
             }, 500);
 
             // 6. Cover menghilang + tombol musik muncul
-
             setTimeout(() => {
-                cover.classList.add("hide");
+                cover?.classList.add("hide");
 
-                musicBtn.classList.remove("hidden");
+                musicBtn?.classList.remove("hidden");
             }, 700);
 
             // 7. Scroll aktif
-
             setTimeout(() => {
                 body.classList.remove("lock-scroll");
 
-                document.querySelector(".countdown-section").scrollIntoView({
+                document.querySelector(".countdown-section")?.scrollIntoView({
                     behavior: "smooth",
                 });
             }, 1100);
@@ -91,14 +89,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // MUSIC BUTTON
     // ==========================================
 
-    if (musicBtn) {
+    if (musicBtn && music) {
         musicBtn.addEventListener("click", () => {
             if (music.paused) {
-                music.play().then(() => {
-                    musicBtn.classList.add("playing");
-
-                    musicBtn.innerHTML = '<i class="bi bi-disc-fill"></i>';
-                });
+                music
+                    .play()
+                    .then(() => {
+                        musicBtn.classList.add("playing");
+                        musicBtn.innerHTML = '<i class="bi bi-disc-fill"></i>';
+                    })
+                    .catch(() => {});
             } else {
                 music.pause();
 
@@ -108,23 +108,25 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-});
 
-// ==========================================
-// RESUME MUSIC SAAT KEMBALI KE TAB
-// ==========================================
+    // ==========================================
+    // RESUME MUSIC SAAT KEMBALI KE TAB
+    // ==========================================
 
-document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "visible") {
-        if (!music.paused) return;
+    document.addEventListener("visibilitychange", () => {
+        if (!music || !musicBtn) return;
 
-        music
-            .play()
-            .then(() => {
-                musicBtn.classList.add("playing");
+        if (document.visibilityState === "visible") {
+            if (!music.paused) return;
 
-                musicBtn.innerHTML = '<i class="bi bi-disc-fill"></i>';
-            })
-            .catch(() => {});
-    }
+            music
+                .play()
+                .then(() => {
+                    musicBtn.classList.add("playing");
+
+                    musicBtn.innerHTML = '<i class="bi bi-disc-fill"></i>';
+                })
+                .catch(() => {});
+        }
+    });
 });
