@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // LOCK SCROLL
     // ==========================================
 
-    body.classList.add("lock-scroll");
+    if (cover) {
+        body.classList.add("lock-scroll");
+    }
 
     // ==========================================
     // OPEN INVITATION
