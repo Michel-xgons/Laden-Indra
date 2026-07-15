@@ -7,17 +7,11 @@
 
     padding: 120px 0;
 
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)),
-        url("../images/7.jpg");
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-repeat: no-repeat;
-
-    background-attachment: fixed;
+    background: linear-gradient(
+        180deg,
+        #faf8f5 0%,
+        #f5f2ee 100%
+    );
 }
 
 /* ==================================================
@@ -200,10 +194,5 @@
 
     .event-card h3 {
         font-size: 2rem;
-    }
-}
-@media (max-width: 768px) {
-    .event-section {
-        background-attachment: scroll;
     }
 }
