@@ -3,7 +3,7 @@ use App\Http\Controllers\WishController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WeddingController;
 
-Route::get('/u/{guest?}', [WeddingController::class, 'index']);
+Route::get('/Laden-Indra/{guest?}', [WeddingController::class, 'index']);
 
 
 
