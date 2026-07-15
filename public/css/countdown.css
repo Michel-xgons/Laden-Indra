@@ -4,59 +4,52 @@
 
 .countdown-section {
     position: relative;
-
-    min-height: 100vh;
-
-    overflow-x: hidden;
-
+    min-height: 100dvh;
+    overflow: hidden;
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     background: #000;
 }
 
 .hero-background {
     position: absolute;
-
     inset: 0;
-
     z-index: 1;
+    overflow: hidden;
 }
 
 .hero-slide {
     position: absolute;
-
     inset: 0;
 
     background-size: cover;
-
     background-position: center;
-
     background-repeat: no-repeat;
 
     opacity: 0;
 
     transform: scale(1);
 
+    will-change: transform, opacity;
+
+    backface-visibility: hidden;
+
     transition:
-        opacity 2s ease,
-        transform 8s ease;
+        opacity 1.5s ease,
+        transform 6s ease;
 }
 
 .hero-slide.active {
     opacity: 1;
-
-    transform: scale(1.06);
+    transform: scale(1.03);
 }
 
 .hero-overlay {
     position: absolute;
 
     inset: 0;
-
+    pointer-events: none;
     background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.25),
@@ -148,11 +141,9 @@
 
     border-radius: 18px;
 
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.12);
 
-    backdrop-filter: blur(10px);
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .time-box span {
@@ -353,7 +344,7 @@
     }
 
     to {
-        transform: scale(1.08);
+        transform: scale(1.03);
     }
 }
 
@@ -421,6 +412,11 @@
 
     .hero-verse span {
         font-size: 0.78rem;
+    }
+
+    .hero-slide.active {
+        animation: none;
+        transform: scale(1);
     }
 
     .scroll-indicator {
