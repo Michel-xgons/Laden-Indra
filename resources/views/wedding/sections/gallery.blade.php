@@ -6,10 +6,7 @@
 
     <div class="container">
 
-        <div class="gallery-header"
-            data-aos="fade-up"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-cubic">
+        <div class="gallery-header" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-out-cubic">
 
             <span class="gallery-subtitle">
                 OUR GALLERY
@@ -33,86 +30,70 @@
         <div class="gallery-grid">
 
             <!-- Row 1 -->
-            <div class="gallery-item"
-                data-aos="fade-up"
-                data-aos-duration="900"
-                data-aos-delay="0"
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="0"
                 data-aos-easing="ease-out-cubic">
 
-                <img src="{{ asset('images/1.jpg') }}" alt="Gallery 1">
+                <img src="{{ asset('images/1.jpg') }}" alt="Gallery 1" loading="lazy" decoding="async" width="550"
+                    height="340">
 
             </div>
 
-            <div class="gallery-item"
-                data-aos="fade-up"
-                data-aos-duration="900"
-                data-aos-delay="0"
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="0"
                 data-aos-easing="ease-out-cubic">
 
-                <img src="{{ asset('images/2.jpg') }}" alt="Gallery 2">
+                <img src="{{ asset('images/2.jpg') }}" alt="Gallery 2" loading="lazy" decoding="async" width="550"
+                    height="340">
 
             </div>
 
             <!-- Row 2 -->
-            <div class="gallery-item"
-                data-aos="fade-up"
-                data-aos-duration="900"
-                data-aos-delay="150"
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="150"
                 data-aos-easing="ease-out-cubic">
 
-                <img src="{{ asset('images/3.jpg') }}" alt="Gallery 3">
+                <img src="{{ asset('images/3.jpg') }}" alt="Gallery 3" loading="lazy" decoding="async" width="550"
+                    height="340">
 
             </div>
 
-            <div class="gallery-item"
-                data-aos="fade-up"
-                data-aos-duration="900"
-                data-aos-delay="150"
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="150"
                 data-aos-easing="ease-out-cubic">
 
-                <img src="{{ asset('images/4.jpg') }}" alt="Gallery 4">
+                <img src="{{ asset('images/4.jpg') }}" alt="Gallery 4" loading="lazy" decoding="async" width="550"
+                    height="340">
 
             </div>
 
             <!-- Row 3 -->
-            <div class="gallery-item"
-                data-aos="fade-up"
-                data-aos-duration="900"
-                data-aos-delay="300"
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="300"
                 data-aos-easing="ease-out-cubic">
 
-                <img src="{{ asset('images/5.jpg') }}" alt="Gallery 5">
+                <img src="{{ asset('images/5.jpg') }}" alt="Gallery 5" loading="lazy" decoding="async" width="550"
+                    height="340">
 
             </div>
 
-            <div class="gallery-item"
-                data-aos="fade-up"
-                data-aos-duration="900"
-                data-aos-delay="300"
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="300"
                 data-aos-easing="ease-out-cubic">
 
-                <img src="{{ asset('images/6.jpg') }}" alt="Gallery 6">
+                <img src="{{ asset('images/6.jpg') }}" alt="Gallery 6" loading="lazy" decoding="async" width="550"
+                    height="340">
 
             </div>
 
             <!-- Row 4 -->
-            <div class="gallery-item"
-                data-aos="fade-up"
-                data-aos-duration="900"
-                data-aos-delay="450"
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="450"
                 data-aos-easing="ease-out-cubic">
 
-                <img src="{{ asset('images/8.jpg') }}" alt="Gallery 7">
+                <img src="{{ asset('images/8.jpg') }}" alt="Gallery 7" loading="lazy" decoding="async" width="550"
+                    height="340">
 
             </div>
 
-            <div class="gallery-item"
-                data-aos="fade-up"
-                data-aos-duration="900"
-                data-aos-delay="450"
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="450"
                 data-aos-easing="ease-out-cubic">
 
-                <img src="{{ asset('images/11.jpg') }}" alt="Gallery 8">
+                <img src="{{ asset('images/11.jpg') }}" alt="Gallery 8" loading="lazy" decoding="async" width="550"
+                    height="340">
 
             </div>
 
