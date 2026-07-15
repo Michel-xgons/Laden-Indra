@@ -202,3 +202,8 @@
         font-size: 2rem;
     }
 }
+@media (max-width: 768px) {
+    .event-section {
+        background-attachment: scroll;
+    }
+}
