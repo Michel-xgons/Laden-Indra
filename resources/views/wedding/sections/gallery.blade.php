@@ -97,6 +97,57 @@
 
             </div>
 
+            <!-- Row 5 -->
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="600"
+                data-aos-easing="ease-out-cubic">
+
+                <img src="{{ asset('images/12.jpg') }}" alt="Gallery 9" loading="lazy" decoding="async" width="550"
+                    height="340">
+
+            </div>
+
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="600"
+                data-aos-easing="ease-out-cubic">
+
+                <img src="{{ asset('images/13.jpg') }}" alt="Gallery 10" loading="lazy" decoding="async" width="550"
+                    height="340">
+
+            </div>
+
+            <!-- Row 6 -->
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="750"
+                data-aos-easing="ease-out-cubic">
+
+                <img src="{{ asset('images/14.jpg') }}" alt="Gallery 11" loading="lazy" decoding="async" width="550"
+                    height="340">
+
+            </div>
+
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="750"
+                data-aos-easing="ease-out-cubic">
+
+                <img src="{{ asset('images/15.jpg') }}" alt="Gallery 12" loading="lazy" decoding="async" width="550"
+                    height="340">
+
+            </div>
+
+            <!-- Row 7 -->
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="900"
+                data-aos-easing="ease-out-cubic">
+
+                <img src="{{ asset('images/16.jpg') }}" alt="Gallery 13" loading="lazy" decoding="async" width="550"
+                    height="340">
+
+            </div>
+
+            <div class="gallery-item" data-aos="fade" data-aos-duration="600" data-aos-delay="900"
+                data-aos-easing="ease-out-cubic">
+
+                <img src="{{ asset('images/17.jpg') }}" alt="Gallery 14" loading="lazy" decoding="async" width="550"
+                    height="340">
+
+            </div>
+
         </div>
 
     </div>
