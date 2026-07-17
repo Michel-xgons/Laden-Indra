@@ -135,11 +135,7 @@
 
                             <span>
 
-                                Gereja Katolik<br>
-
-                                Stasi Tri Tunggal Maha Kudus<br>
-
-                                Long Bawan
+                                Long Kiwan
 
                             </span>
 
@@ -147,7 +143,7 @@
 
                     </div>
 
-                    <a href="https://maps.app.goo.gl/AvkgMAdEGXsmfdVeA" target="_blank" rel="noopener noreferrer"
+                    <a href="https://maps.app.goo.gl/17r4hjucjFaNwg3V7" target="_blank" rel="noopener noreferrer"
                         class="event-btn">
 
                         <i class="bi bi-geo-alt"></i>
